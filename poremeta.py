@@ -3,10 +3,11 @@
 import h5py, numpy as np, os, sys
 
 if len(sys.argv) < 4:
-    print('Usage: poremeta.py runname fast5_path keeptype')
-    print('       Extract a table of attributes and values from a fast5 file.')
-    print('       where')
-    print('         keeptype is "all" or "paramsonly"')
+    print('Usage:   poremeta.py runname fast5_path keeptype')
+    print('         Extract a table of attributes and values from a fast5 file.')
+    print('Options:')
+    print('         keeptype : "all" to extract all attributes or "paramsonly" for the setup or run-related attributes only')
+    print('')
     sys.exit(1)
 runname = sys.argv[1]
 fast5_path = os.path.expandvars(sys.argv[2])
